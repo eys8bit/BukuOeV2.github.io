@@ -1,0 +1,147 @@
+:root {
+  --bgSearch-color: green;
+  --blackDasar-color: #333;
+  --whiteDasar-color: #fff;
+  --btnMenu-color: green;
+  --menuBgColor-color: #333;
+  --boxMenu-color: green;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+  background-color: var(--blackDasar-color);
+}
+
+/* 
+//========================================================================================================================
+tombol menu */
+
+.menu-btn {
+  cursor: pointer;
+  padding: 10px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 999;
+  background-color: var(--btnMenu-color);
+}
+
+.menu-icon {
+  width: 24px;
+  height: 24px;
+  fill: #333;
+  transition: 0.4s;
+}
+
+/* end */
+
+/* 
+//========================================================================================================================
+search Input*/
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.searchBuku {
+  width: 90%;
+  height: 26px;
+  border-radius: 4px;
+  background-color: var(--blackDasar-color);
+  border: none;
+  padding: 0 5px 0 5px;
+  color: var(--whiteDasar-color);
+}
+/* end */
+
+/*
+//========================================================================================================================
+menu */
+.menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: var(--menuBgColor-color);
+  transition: 0.4s;
+  z-index: 998;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.menu li {
+  width: 100%;
+  padding: 0 0 15px 0;
+  /* border-bottom: 1px solid #555; */
+}
+
+/* .menu li a {
+  color: #fff;
+  text-decoration: none;
+} */
+
+.boxAmenu {
+  display: flex;
+  height: 30px;
+  width: 92%;
+  color: var(--whiteDasar-color);
+  text-decoration: none;
+  border-radius: 4px;
+  background-color: var(--boxMenu-color);
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.menu.active {
+  right: 0;
+}
+
+.menuBagi {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 9fr;
+}
+.menuBagi .search {
+  background-color: var(--bgSearch-color);
+}
+.menuBagi .listBuku {
+  background-color: var(--menuBgColor-color);
+  overflow: auto;
+}
+.listBuku::-webkit-scrollbar {
+  display: none;
+}
+
+.jarak {
+  height: 50px;
+}
+/* end */
+
+/*
+//========================================================================================================================
+konten*/
+iframe {
+  border: none;
+  width: 100%;
+  height: 100%;
+}
+
+.mainKonten {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+}
+/* end */
