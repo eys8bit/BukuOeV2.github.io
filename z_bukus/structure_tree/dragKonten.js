@@ -119,3 +119,5 @@ container.addEventListener("wheel", zoom);
 
 // Tambahkan event listener untuk menangani zoom dengan trackpad
 container.addEventListener("DOMMouseScroll", zoom);
+
+container.addEventListener("gesturechange", zoom);
