@@ -3,6 +3,8 @@ var container = document.getElementById("treeContainer");
 
 // Variabel untuk menyimpan posisi mouse awal dan posisi kiri atas container
 var offsetX, offsetY;
+var zoomFactor = 0.4;
+container.style.transform = "scale(" + zoomFactor + ")";
 var isDragging = false;
 
 // Variabel untuk menyimpan faktor zoom
@@ -120,4 +122,3 @@ container.addEventListener("wheel", zoom);
 // Tambahkan event listener untuk menangani zoom dengan trackpad
 container.addEventListener("DOMMouseScroll", zoom);
 
-container.addEventListener("gesturechange", zoom);
