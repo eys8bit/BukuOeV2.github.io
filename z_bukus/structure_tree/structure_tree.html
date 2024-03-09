@@ -4,12 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>gesabasa_structureTree</title>
-    <link rel="stylesheet" href="treeStructure.css" />
+    <link rel="stylesheet" href="pc_strukturTree.css" />
+    <link rel="stylesheet" href="mobile_strukturTree.css" />
     <style>
-      .tree {
-        width: 4231px;
-        top: 0;
-        right: 250px;
+      /* pc */
+      @media (min-width: 991px) {
+        .tree {
+          width: 4231px;
+          top: 0;
+          right: 250px;
+        }
+      }
+      /* mobile */
+      @media (max-width: 991px) {
+        .tree {
+          width: 4231px;
+          top: 0;
+          /* right: 0px; */
+          left: -1953.66px;
+        }
       }
     </style>
   </head>

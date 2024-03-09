@@ -1,0 +1,149 @@
+/**
+//========================================================================================================================
+//==> pc
+/**/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@media (min-width: 991px) {
+  :root {
+    --tree_a_span-fontsize: 10px;
+    --tree_a_span-padding: 10px;
+    --tree_a_img-width: 40px;
+    --tree_a_img-height: 40px;
+    --tree_a-padding: 4px;
+  }
+
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    height: 100%;
+    width: 100%;
+    /* display: grid; */
+    /* align-items: center; */
+    background: #333333;
+    font-family: "Poppins", sans-serif;
+    overflow: hidden;
+  }
+
+  /* body::-webkit-scrollbar {
+  display: none;
+  } */
+
+  .tree {
+    position: relative;
+    height: auto;
+    cursor: move;
+    text-align: center;
+    width: 4231px;
+    top: 0;
+    right: 250px;
+    /* background-color: #9347af; */
+  }
+  .tree ul {
+    /* width: 100%; */
+    padding-top: 20px;
+    position: relative;
+    transition: 5s;
+  }
+  .tree li {
+    display: inline-table;
+    text-align: center;
+    list-style-type: none;
+    position: relative;
+    padding: 10px;
+    transition: 0.5s;
+  }
+  .tree li::before,
+  .tree li::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 50%;
+    border-top: 4px solid #ccc;
+    width: 51%;
+    height: 10px;
+  }
+  .tree li::after {
+    right: auto;
+    left: 50%;
+    height: 18px;
+    border-left: 4px solid #ccc;
+  }
+  .tree li:only-child::after,
+  .tree li:only-child::before {
+    display: none;
+  }
+  .tree li:only-child {
+    padding-top: 0;
+  }
+  .tree li:first-child::before,
+  .tree li:last-child::after {
+    border: 0 none;
+  }
+  .tree li:last-child::before {
+    border-right: 4px solid #ccc;
+    border-radius: 0px 5px 0px 0px;
+    height: 18px;
+  }
+  .tree li:first-child::after {
+    border-radius: 5px 0px 0px 0px;
+  }
+  .tree ul ul::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border-left: 4px solid #ccc;
+    width: 0;
+    height: 20px;
+  }
+  .tree a {
+    border: 1px solid #00c700;
+    background-color: #008000;
+    margin-top: 10px;
+    padding: var(--tree_a-padding);
+    display: inline-grid;
+    border-radius: 5px;
+    text-decoration-line: none;
+    border-radius: 5px;
+    transition: 0.5s;
+  }
+  .tree a img {
+    width: var(--tree_a_img-width);
+    height: var(--tree_a_img-height);
+    margin-bottom: 10px !important;
+    border-radius: 100px;
+    margin: auto;
+  }
+  .tree a span {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #ffffff;
+    padding: var(--tree_a_span-padding);
+    font-size: var(--tree_a_span-fontsize);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+  }
+  /* hover-selection */
+  .tree li a:hover,
+  .tree li a:hover img,
+  .tree li a:hover span,
+  .tree li a:hover + ul li a {
+    background: #3ec03e;
+    color: #000;
+    border: 1px solid #94a0b4;
+    box-shadow: 0px 0px 8px -5px#5f5f5f;
+  }
+  .tree li a:hover + ul li::after,
+  .tree li a:hover + ul li::before,
+  .tree li a:hover + ul::before,
+  .tree li a:hover + ul ul::before {
+    border-color: #7384ae;
+  }
+}

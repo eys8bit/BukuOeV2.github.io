@@ -5,9 +5,6 @@ var container = document.getElementById("treeContainer");
 var offsetX, offsetY;
 var isDragging = false;
 
-// Variabel untuk menyimpan faktor zoom
-var zoomFactor = 1;
-
 // Fungsi untuk memulai drag
 function startDrag(e) {
   isDragging = true;
@@ -34,42 +31,10 @@ function drag(e) {
     // Atur posisi container sesuai perbedaan
     container.style.left = dx + "px";
     container.style.top = dy + "px";
+
+    console.log("clientX => " + e.clientX);
+    console.log("clienty => " + e.clientY);
   }
-}
-
-// Fungsi untuk menangani zoom
-function zoom(e) {
-  e.preventDefault();
-  var delta = e.deltaY || e.detail || e.wheelDelta;
-
-  // Menyesuaikan faktor zoom
-  if (delta > 0) {
-    zoomFactor *= 0.9;
-  } else {
-    zoomFactor *= 1.1;
-  }
-
-  // Simpan posisi awal mouse relatif terhadap posisi kiri atas container
-  var rect = container.getBoundingClientRect();
-  var prevX = e.clientX - rect.left;
-  var prevY = e.clientY - rect.top;
-
-  // Mengatur transformasi scale CSS pada container
-  container.style.transformOrigin = "top left";
-  container.style.transform = "scale(" + zoomFactor + ")";
-
-  // Mendapatkan posisi mouse relatif terhadap container setelah zoom
-  rect = container.getBoundingClientRect();
-  var newX = e.clientX - rect.left;
-  var newY = e.clientY - rect.top;
-
-  // Menyesuaikan offsetX dan offsetY berdasarkan perubahan skala
-  offsetX -= (newX - prevX) * (1 - 1 / zoomFactor);
-  offsetY -= (newY - prevY) * (1 - 1 / zoomFactor);
-
-  // Atur ulang transformasi translate CSS untuk mengkompensasi perubahan skala
-  container.style.transform =
-    "scale(" + zoomFactor + ") translate(" + offsetX + "px, " + offsetY + "px)";
 }
 
 // Variabel untuk menyimpan posisi awal sentuhan dan posisi kiri atas container
@@ -113,9 +78,3 @@ document.addEventListener("touchend", stopDrag);
 
 // Tambahkan event listener untuk menangani pergerakan drag
 document.addEventListener("touchmove", dragTouch);
-
-// Tambahkan event listener untuk menangani zoom dengan mouse wheel
-container.addEventListener("wheel", zoom);
-
-// Tambahkan event listener untuk menangani zoom dengan trackpad
-container.addEventListener("DOMMouseScroll", zoom);
