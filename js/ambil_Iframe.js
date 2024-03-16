@@ -13,7 +13,7 @@ const mediaQuery = window.matchMedia("(min-width: 991px)");
 
 function handleMediaQueryChange(event) {
   const iframeElement = document.getElementById("ambilIframe");
-  const contentURL = "z_bukus/structure_tree/structure_tree.html"; // Ganti dengan alamat yang sesuai
+  const contentURL = "z_bukus/structure_tree/tree_line.html"; // Ganti dengan alamat yang sesuai
 
   if (event.matches) {
     iframeElement.src = contentURL;
