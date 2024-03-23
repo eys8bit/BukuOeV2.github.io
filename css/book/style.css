@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #3f3b43;
+  overflow: scroll;
+  font-family: "Poppins", sans-serif;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.lembar {
+  padding: 10px 14% 10px 14%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/*
+//========================================================================================================================
+  //==> untuk mengatur shortCutBtn
+*/
+.btnShortCut {
+  width: 100%;
+  display: flex;
+  /* justify-content: center; */
+  align-items: start;
+  flex-direction: column;
+  padding-bottom: 10px;
+  background-color: #008000;
+  margin-bottom: 10px;
+  padding: 10px 10px 0 10px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.button {
+  background-color: #3f3b43;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.btnShortCut .box {
+  display: none;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+
+  /* background-color: yellow; */
+}
+/**/
+
+/*
+//========================================================================================================================
+//==> untuk mengatur gambar
+*/
+/**/
+.gambar {
+  height: 30%;
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gambar img {
+  height: 100%;
+  width: 100%;
+
+  padding-bottom: 10px;
+}
+/*
+//========================================================================================================================
+//==> untuk ukuran video
+*/
+.video {
+  width: 100%;
+  height: 100%;
+}
+.video iframe {
+  margin: 0;
+  border: 0;
+  height: calc(100vh * 0.8);
+  width: 100%;
+  padding-bottom: 10px;
+}
+
+.lembar .text {
+  /* background-color: green; */
+  width: 100%;
+  padding-bottom: 10px;
+}
+/**/
+
+/*
+//========================================================================================================================
+//==> untuk mengatur tag p
+*/
+.lembar .text p {
+  /* width: 100%; */
+  color: #fff;
+  text-align: justify;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/**/
+/*
+//========================================================================================================================
+//==> .judulMateri
+*/
+
+/**/
+
+@media (max-width: 991px) {
+  .lembar {
+    padding: 10px 10px 10px 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /*
+  //========================================================================================================================
+  //==> mengatur ukuran video mobile
+  */
+  .video {
+    height: 100%;
+    width: 100%;
+  }
+  .video iframe {
+    margin: 0;
+    border: 0;
+    height: calc(100vw * 0.5);
+    width: 100%;
+    padding-bottom: 10px;
+  }
+  /**/
+}
