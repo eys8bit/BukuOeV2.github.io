@@ -14,7 +14,7 @@ const mediaQuery = window.matchMedia("(min-width: 991px)");
 function handleMediaQueryChange(event) {
   const iframeElement = document.getElementById("ambilIframe");
   // const contentURL = "z_bukus/blender/blender.html"; // Ganti dengan alamat yang sesuai (halaman pertama yang di iframe)
-  const contentURL = "z_bukus/blender/blender_page/shortcut.html"; // Ganti dengan alamat yang sesuai (halaman pertama yang di iframe)
+  const contentURL = "z_bukus/link_web/link_web.html"; // Ganti dengan alamat yang sesuai (halaman pertama yang di iframe)
 
   if (event.matches) {
     iframeElement.src = contentURL;
